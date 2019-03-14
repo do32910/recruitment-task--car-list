@@ -4,69 +4,89 @@ $header-color: #fff;
 $body-color: #8D888C;
 
 $table-background-even: #f9f4ff;
-$table-background-odd: #eee;
+$table-background-odd: #fff;
 
 $button-color: #eee;
 $button-background: #197a86;
 
 .cars-table{
-    margin-top: 100px;
-    margin-bottom: 50px;
-    width: 1000px;
-    border-radius: 10px;
-    border-collapse: collapse;
-    box-shadow: 0px 5px 30px #555;
-    background-color:#aaa;
-    border: none;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  width: 1000px;
+  border-radius: 10px;
+  border-collapse: collapse;
+  box-shadow: 0px 5px 30px #555;
+  border: none;
 }
 
 .car-model-name{
-    display: block;
-    text-align: center;
-    margin-bottom: 10px;
+  display: block;
+  text-align: center;
 }
 
 .car-photo{
-    display: block;
-    margin: 20px auto 10px auto;
+  display: block;
+  margin: 20px auto 10px auto;
 }
 
 .cars-table__header{
-    color: $header-color;
-    &-item{
-        background-color: $header-background;     
-        padding: 20px 10px;
-        &:first-child{
-            border-top-left-radius: 10px;
-            padding-left: 50px;
-        }
-        &:last-child{
-            border-top-right-radius: 10px;
-        }
-    }
+  color: $header-color;
+  &-item{
+      background-color: $header-background;     
+      padding: 20px 10px 20px 30px;
+      &:first-child{
+          border-top-left-radius: 10px;
+      }
+      &:last-child{
+          border-top-right-radius: 10px;
+      }
+  }
 }
 .cars-table__body-row{
-    background-color: $table-background-even;
-    color: $body-color;
-    &:nth-child(2n){
-        background-color: $table-background-odd;
-    }
+  background-color: $table-background-even;
+  color: $body-color;
+  &:nth-child(2n){
+      background-color: $table-background-odd;
+  }
+  &:last-child td{
+      &:first-child{
+          border-bottom-left-radius: 10px;
+      }
+      &:last-child{
+          border-bottom-right-radius: 10px;
+      }
+  }
 }
 .cars-table__body-row td{
-    padding: 20px;
+  padding: 20px;
 }
 .manage-btn{
-    border-radius: 5px;
-    padding: 10px;
-    border: none;
-    color: $button-color;
-    background-color: $button-background;
-    margin-right: 10px;
-    transition: 0.3s all;
-    &:last-child{
-        margin-right: 0;
-    }
-    &:hover{
-        opacity: 0.8;
-    }
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  color: $button-color;
+  background-color: $button-background;
+  margin-right: 10px;
+  transition: 0.3s all;
+  &:last-child{
+      margin-right: 0;
+  }
+  &:hover{
+      opacity: 0.8;
+      cursor: pointer;
+  }
+  &:focus{
+      outline: none;
+      box-shadow: 0 0 5px #555;
+  }
+}
+.unavailable{
+  color: #ce2323;
+  opacity: 0.6;
+}
+.empty-array{
+  height: 50px;
+  & td{
+      padding-left: 30px;
+  }
 }
