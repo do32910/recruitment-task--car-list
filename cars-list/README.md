@@ -1,3 +1,13 @@
+## Quick run:
+`npm install`
+
+`npm start`
+
+The project will be available at http://localhost:3000
+<hr>
+
+Below you can find the original README delivered by Create React App: 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
